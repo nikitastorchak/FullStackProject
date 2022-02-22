@@ -11,16 +11,16 @@ module.exports.add = (req, res) => {
   place.save().then(result => {
     res.send(result);
   });
-
 };
+
 module.exports.show = (req, res) => {
   Places.find().then((result) => {
     res.send(result);
   }).catch((err) => {
     res.send(err);
   });
-
 };
+
 module.exports.update = (req, res) => {
   const body = req.query
   res.set('Access-Control-Allow-Origin', '*');
@@ -35,8 +35,8 @@ module.exports.update = (req, res) => {
         res.send(result);
       });  
     });
-
 };
+
 module.exports.del = (req, res) => {
   const id = req.query._id;
   if (id) {
@@ -45,6 +45,5 @@ module.exports.del = (req, res) => {
     }).catch((err) => {
         res.send(err);
     });
-
   }
 };
