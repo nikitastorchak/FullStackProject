@@ -1,9 +1,7 @@
-
 let allPlaces = [];
 const textboxHowMuch = '';
 const serverAdress = 'http://localhost:8000';
 let today = new Date();
-
 today = String(today.getDate()).padStart(2, '0') + '.' + String(today.getMonth() + 1).padStart(2, '0') + '.' + today.getFullYear();
 window.onload = () => {
   render();
@@ -112,19 +110,23 @@ const editButtonClick = (content, index, item) => {
   content.appendChild(editDate);
   content.appendChild(editPrice);
   content.appendChild(editApply);
-  editApply.onclick = async () => {
-    allPlaces[index].place = editPlace.value;
-    allPlaces[index].date = editDate.value;
-    allPlaces[index].price = editPrice.value;
-    localStorage.setItem('list', JSON.stringify(allPlaces));
-    const resp = await fetch(`${serverAdress}/update?_id=${item._id}&place=${editPlace.value}&date=${editDate.value}&price=${editPrice.value}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-type': 'application/json;charset=utf-8',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-    render();
+  editApply.onclick = async () => {  
+    editApplyClick();
   }
+}
+const editApplyClick = () => {
+  const [place, date, price] = allPlaces[index]
+  place = editPlace.value;
+  date = editDate.value;
+  price = editPrice.value;
+  localStorage.setItem('list', JSON.stringify(allPlaces));
+  const resp = await fetch(`${serverAdress}/update?_id=${item._id}&place=${editPlace.value}&date=${editDate.value}&price=${editPrice.value}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-type': 'application/json;charset=utf-8',
+      'Access-Control-Allow-Origin': '*'
+    }
+  });
+  render();
 }
 

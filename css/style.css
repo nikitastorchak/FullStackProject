@@ -1,10 +1,10 @@
 body {
   margin: 0;
   width: 100vw;
-  
   min-height: 100vh;
   height: auto;
 }
+
 .main-window {
   width: 100vw;
   min-height: 100vh;
@@ -13,11 +13,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-h2{
+
+h2 {
   font-size: 2.1vw;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
 }
+
 .wrap {
   width: 100vw;
   min-height: 100vh;
@@ -28,41 +30,46 @@ h2{
   justify-content: center;
   align-items: center;
 }
-.wrap-title{
+
+.wrap-title {
   margin: 50px;
 }
+
 .block-wrap{
   width: 40%;
   display: flex;
   flex-direction: column;
 }
+
 .block {
   width: 60vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
-label{
+
+label {
   font-family: 'Open Sans', sans-serif;
   margin: 5px 0px;
 }
-.block-where{
+
+.block-where {
   width: 45%;
 }
-.block-howMuch{
+
+.block-howMuch {
   width: 35%;
 }
 
 input {
-  /* margin: 0 10px; */
   padding: 14px;
   font-size: 15px;
   border-radius: 5px;
   outline: none;
   border: none;
 }
+
 #addButton {
   background-color: #79caab;
   width: auto;
@@ -75,7 +82,6 @@ input {
   transition: 0.3s;
 }
 
-
 #addButton:hover{
   background-color: #93e2c4;
 }
@@ -84,10 +90,12 @@ input {
   margin: 10px;
   width: 40%;
 }
+
 .editPlace {
   width: 40%;
   margin: 0px;
 }
+
 .editDate {
   width: auto;
   margin: 10px;
@@ -99,13 +107,16 @@ input {
   min-width: auto;
   text-align: end;
 }
+
 .editPrice {
   margin: 0px;
   width: 20%;
 }
+
 #information {
   width: 60vw;
 }
+
 .content {
   width: 100%;
   font-size: 2vw;
@@ -116,10 +127,12 @@ input {
   animation-duration: 0.1s;
   animation-name: appear;
 }
+
 .anim {
   animation-duration: 0.5s;
   animation-name: slidein;
 }
+
 @keyframes slidein {
   from {
     margin-left: 0%;
@@ -130,6 +143,7 @@ input {
     opacity: 0;
   }
 }
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -140,26 +154,30 @@ input {
     opacity: 1;
   }
 }
+
 .date {
   width: auto;
 }
+
 .edit, .del {
   padding: 5px;
   margin: 5px;
   font-size: 20px;
-  
 }
-.editApply{
+
+.editApply {
   width: 80px;
   margin: 10px;
   padding: 10px 0;
   text-align: center;
 }
+
 .summ {
   text-align: right;
   margin: 20px;
   font-size: 25px;
 }
+
 @media (max-width: 1200px) {
   .block {
     width: 60vw;
@@ -167,15 +185,15 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
   }
-  .block-where{
+
+  .block-where {
     width: 65%;
   }
-  .block-howMuch{
+
+  .block-howMuch {
     width: 65%;
   }
-  
 
   #addButton {
     background-color: #79caab;
@@ -189,6 +207,7 @@ input {
     align-self: center;
     transition: 0.3s;
   }
+
   .summ {
     text-align: center;
     margin: 20px;
@@ -197,15 +216,17 @@ input {
 }
 @media (max-width: 1000px) {
   .content {
-
     flex-direction: row;
   }
-  .block-where{
+
+  .block-where {
     width: 100%;
   }
-  .block-howMuch{
+
+  .block-howMuch {
     width: 100%;
   }
+
   #addButton {
     background-color: #79caab;
     width: auto;
@@ -218,7 +239,6 @@ input {
     align-self: end;
     transition: 0.3s;
   }
-
 }
 @media (max-width: 950px) {
   h2{
@@ -226,10 +246,11 @@ input {
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
   }
+
   .block {
     width: 70vw;
-
   }
+
   #information {
     width: 70vw;
   }
@@ -237,8 +258,8 @@ input {
 @media (max-width: 650px) {
   .block {
     width: 70vw;
-
   }
+
   .content {
     font-size: 3.5vw;
     flex-direction: column;
@@ -249,10 +270,12 @@ input {
     text-align: center;
     width: 90%;
   }
+
   .editPlace {
     width: 90%;
     margin: 0px;
   }
+
   .editDate {
     width: auto;
     margin: 10px;
@@ -272,6 +295,7 @@ input {
 i {
   transition: 0.1s;
 }
+
 i:hover {
   color: #79caab;
   transition: 0.1s;
