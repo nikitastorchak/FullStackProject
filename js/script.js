@@ -119,7 +119,6 @@ const editApplyClick = () => {
   place = editPlace.value;
   date = editDate.value;
   price = editPrice.value;
-  localStorage.setItem('list', JSON.stringify(allPlaces));
   const resp = await fetch(`${serverAdress}/update?_id=${item._id}&place=${editPlace.value}&date=${editDate.value}&price=${editPrice.value}`, {
     method: 'PATCH',
     headers: {
