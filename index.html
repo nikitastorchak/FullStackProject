@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shoping List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/d8242536c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="wrap">
+      <h2 class="wrap-title">Учет моих расходов</h2>
+      <div class="block">
+        <div class="block-wrap block-where">
+          <label>Куда было потрачено</label>
+          <input id="place"  placeholder="Куда было потрачено">
+        </div>
+        <div class="block-wrap block-howMuch">
+          <label>Сколько было потрачено</label>
+          <input id="price"  placeholder="Сколько было потрачено">
+        </div>
+        <button id="addButton" onclick="clickAddButton()">Добавить</button>
+      </div>
+      <div id="information"></div>
+    </div>
+  </body>
+</html>
